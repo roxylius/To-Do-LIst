@@ -13,7 +13,7 @@ const App = () => {
     const fetchData = async () => {
       console.log('location', location, "pathname:", location.pathname);
       try {
-        const response = await fetch('http://localhost:3000' + location.pathname);
+        const response = await fetch(process.env.REACT_APP_SERVER_URL + location.pathname);
         const responseData = await response.json();
         setListName(responseData.name);
         console.log(responseData);
@@ -27,7 +27,7 @@ const App = () => {
 
   const addItem = async (inputText) => {
     try {
-      const response = await fetch('http://localhost:3000' + location.pathname, {
+      const response = await fetch(process.env.REACT_APP_SERVER_URL + location.pathname, {
         method: "POST",
         body: JSON.stringify({
           list: ListName,
@@ -47,7 +47,7 @@ const App = () => {
 
   const deleteItem = async (id) => {
     try {
-      const response = await fetch('http://localhost:3000' + location.pathname + '?taskId=' + id, {
+      const response = await fetch(process.env.REACT_APP_SERVER_URL + location.pathname + '?taskId=' + id, {
         method: "DELETE"
       });
       console.log("successfully deleted from list", response.text());
