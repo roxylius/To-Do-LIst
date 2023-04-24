@@ -1,0 +1,71 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form input {
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 0.4rem 0.2rem;
+    border-bottom-right-radius: 15px 3px;
+    border-bottom-left-radius: 3px 15px;
+    border: solid 3px transparent;
+    border-bottom: dashed 3px #fdcb6e;
+    font-family: "Architects Daughter", cursive;
+    font-size: 1rem;
+    color: hsla(260, 2%, 25%, 0.7);
+    width: 65%;
+    margin-bottom: 8px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:checked {
+    color: aqua
+}
+
+
+/* for button styling and animation */
+.btn-style {
+    background-color: #ffeaa7;
+    border: 2px solid #422800;
+    border-radius: 0.7rem;
+    box-shadow: #422800 0.25rem 0.25rem 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0 1.125rem;
+    line-height: 3.125rem;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transform: scale(0.75);
+}
+
+.btn-style:hover {
+    background-color: #fff;
+}
+
+.btn-style:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: scale(0.75) translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .btn-style {
+        min-width: 7.5rem;
+        padding: 0 1.5625rem;
+    }
+}
+
+.btn-style span {
+    display: block;
+    padding: 0rem 0rem;
+}
